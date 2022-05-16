@@ -168,7 +168,6 @@ int check_duration_validation (int duration);
 
 int main (int argc, char *argv[])
 {
-  //if malloc don't work add exit failure
   if (!check_command_validation (argc, argv))
     {
       return EXIT_FAILURE;
@@ -178,6 +177,7 @@ int main (int argc, char *argv[])
       number_of_lines * sizeof (BusLine));
   if (!get_lines (all_lines, &number_of_lines))
     {
+      free(all_lines);
       return EXIT_FAILURE;
     }
   if (check_command (argv) == B)
@@ -197,6 +197,7 @@ int main (int argc, char *argv[])
     {
       if (!test_mode (all_lines, number_of_lines))
         {
+          free(all_lines);
           return EXIT_FAILURE;
         }
     }
