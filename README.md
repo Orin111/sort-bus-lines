@@ -1,3 +1,1 @@
-# ex2-orin1
-
-# Line 187: added free (all_lines) to prevent memory leak
+https://github.com/OmerFerster/Workshop-in-C-CPP/tree/main/Exercise%202
